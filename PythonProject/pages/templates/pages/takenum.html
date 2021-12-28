@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+{%block 'content'%}
+
+<form action="{% url 'Average'%}" method ='post' class="form-control">
+    {% csrf_token %}
+    <h5>Enter Number</h5>
+    <br>
+    <div class ="row form-group">
+        <div class="col-md-4">
+            <label> First Number</label>
+            <input type ="Number" name="FirstNumber" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <label> Second Number</label>
+            <input type ="Number" name="SecondNumber" class="form-control">
+        </div>
+
+    </div>
+   <br>
+    <input type="submit" value="Calculate Average" class="btn btn-success">
+
+</form>
+
+
+    {%endblock 'content'%}
